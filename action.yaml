@@ -23,8 +23,8 @@ runs:
         sudo apt -y install mysql-server
         sudo apt -y install ansible
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-        ssh-keyscan -H ${{ inputs.PRIVATE_IP_VMDB }} >> ~/.ssh/known_hosts
-        sshpass -p "${{ inputs.VM1_PASS }}" ssh-copy-id ${{ inputs.VM1_USER }}@${{ inputs.PRIVATE_IP_VMDB }}
+        # ssh-keyscan -H ${{ inputs.PRIVATE_IP_VMDB }} >> ~/.ssh/known_hosts
+        # sshpass -p "${{ inputs.VM1_PASS }}" ssh-copy-id ${{ inputs.VM1_USER }}@${{ inputs.PRIVATE_IP_VMDB }}
       # env:
       #   INPUT_PRIVATE_IP_VMDB: ${{ inputs.PRIVATE_IP_VMDB }}
       #   INPUT_VM1_PASS: ${{ inputs.VM1_PASS }}
